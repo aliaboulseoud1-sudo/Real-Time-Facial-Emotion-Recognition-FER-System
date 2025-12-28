@@ -234,3 +234,34 @@ assets/
 
 ---
 
+## 👥 Team Members & Contributions
+
+### Hazem Hatem
+- Data preprocessing & augmentation
+- Model information module
+
+### Ali Waheed Abdullah
+- Model architecture (model.py)
+- Main GUI (app.py)
+
+### Abdullah El-Shahaly
+- Training pipeline (train.py)
+- Dataset GUI module
+
+### Fares Ashraf
+- Evaluation pipeline (evaluate.py)
+- Evaluation GUI module
+
+### Youssef Ibrahim Abd Elwahab
+- Image prediction logic
+- Image prediction GUI
+
+### Eslam Ayman Kamal
+- Real-time detection pipeline
+- Webcam GUI module
+
+---
+
+## 📜 License
+
+This project is developed for **educational and research purposes.**
