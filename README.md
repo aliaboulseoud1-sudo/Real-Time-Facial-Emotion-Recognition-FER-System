@@ -32,3 +32,43 @@ The system is modular, configurable, and production-ready.
 ---
 
 ## 📂 Project Structure
+deep_learning_project/
+│── config.py
+│── preprocessing.py
+│── model.py
+│── train.py
+│── evaluate.py
+│── predict.py
+│── live_detection.py
+│── checkpoints/
+│── results/
+│ ├── logs/
+│ ├── plots/
+│ ├── metrics/
+│ ├── predictions/
+│ ├── screenshots/
+│ └── recordings/
+│── fer2013/
+│ ├── fer2013.csv
+│ ├── train/
+│ └── test/
+└── gui/
+├── app.py
+├── pages/
+│ ├── image_prediction.py
+│ ├── webcam_live.py
+│ ├── model_info.py
+│ ├── dataset_page.py
+│ └── evaluation_page.py
+
+
+---
+
+## ⚙️ Installation
+
+### 1️⃣ Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux
+venv\Scripts\activate      # Windows
+
