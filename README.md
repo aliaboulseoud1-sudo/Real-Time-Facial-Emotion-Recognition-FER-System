@@ -208,5 +208,29 @@ assets/
 
 ---
 
+## 🚀 Model Improvements & Enhancements
+### Baseline Performance
+- FER2013 only: ~65% accuracy (expected for dataset quality)
 
+### Identified Limitations
+- Noisy labels
+- Low resolution images
+- Class imbalance
+
+### Enhancement Strategy
+#### Multi-dataset training:
+- FER2013
+- FER+
+- AffectNet
+
+#### Stronger models:
+- ResNet34
+- CBAM Attention Module
+
+### Final Outcomes
+- Higher accuracy
+- Better feature discrimination
+- Improved real-time stability
+
+---
 
