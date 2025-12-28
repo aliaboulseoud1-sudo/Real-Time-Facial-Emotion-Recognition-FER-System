@@ -45,4 +45,12 @@ The system is modular, configurable, and production-ready.
 python -m venv venv
 source venv/bin/activate   # Linux
 venv\Scripts\activate      # Windows
-
+```
+## 2️⃣ Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+If requirements.txt is not available:
+```bash
+pip install torch torchvision numpy opencv-python pillow matplotlib tqdm tensorboard streamlit
+```
