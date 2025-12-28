@@ -5,7 +5,6 @@ import numpy as np
 import time
 from streamlit_webrtc import webrtc_streamer, VideoProcessorBase, RTCConfiguration
 import av
-from streamlit_autorefresh import st_autorefresh
 import pandas as pd
 import sys
 import os
@@ -324,16 +323,14 @@ def render_instructions():
 def render_settings():
     st.markdown("<h3 class='section-title'>⚙ Display Settings</h3>", unsafe_allow_html=True)
     
-    col1, col2, col3 = st.columns(3)
+    col1, col2 = st.columns(2)
     
     with col1:
-        show_stats = st.checkbox("📊 Live Statistics", value=True)
-    with col2:
         show_emotions_list = st.checkbox("🎭 Emotion Classes", value=True)
-    with col3:
-        show_probabilities = st.checkbox("📈 Probability Chart", value=True)
+    with col2:
+        pass
     
-    return show_stats, show_emotions_list, show_probabilities
+    return show_emotions_list
 
 def render_webcam_stream():
     st.markdown("<h3 class='section-title'>🎥 Live Camera Feed</h3>", unsafe_allow_html=True)
@@ -358,6 +355,7 @@ def render_live_stats(webrtc_ctx, show_probabilities):
     st.markdown("<hr>", unsafe_allow_html=True)
     st.markdown("<h3 class='section-title'>📊 Real-time Statistics</h3>", unsafe_allow_html=True)
     
+    # Create placeholders for metrics
     stats_col1, stats_col2, stats_col3, stats_col4 = st.columns(4)
     emotion_placeholder = stats_col1.empty()
     confidence_placeholder = stats_col2.empty()
@@ -366,10 +364,10 @@ def render_live_stats(webrtc_ctx, show_probabilities):
     
     prob_placeholder = st.empty() if show_probabilities else None
 
-    st_autorefresh(interval=200, key="stats_refresh")
-    
+    # Get the processor
     processor = webrtc_ctx.video_processor
     
+    # Update metrics - these will update automatically when the processor updates
     emotion_placeholder.metric(
         "Current Emotion",
         processor.emotion,
@@ -393,6 +391,7 @@ def render_live_stats(webrtc_ctx, show_probabilities):
         </div>
     """, unsafe_allow_html=True)
     
+    # Show probabilities table if enabled
     if show_probabilities and prob_placeholder:
         prob_data = {
             "Emotion": Config.EMOTIONS,
@@ -498,14 +497,11 @@ def webcam_page():
     
     st.markdown("<hr>", unsafe_allow_html=True)
     
-    show_stats, show_emotions_list, show_probabilities = render_settings()
+    show_emotions_list = render_settings()
     
     st.markdown("<hr>", unsafe_allow_html=True)
     
     webrtc_ctx = render_webcam_stream()
-    
-    if show_stats:
-        render_live_stats(webrtc_ctx, show_probabilities)
     
     if show_emotions_list:
         render_emotion_classes()
