@@ -154,6 +154,9 @@ Example Output:
 ```markdown
 Prediction: Happy (94.12%)
 ```
+### Folder From Images
+can predict the emotion of multiple images.
+
 ---
 
 ## Real-Time Webcam Detection
