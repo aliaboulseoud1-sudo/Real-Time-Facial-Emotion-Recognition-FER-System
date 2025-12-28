@@ -32,8 +32,36 @@ The system is modular, configurable, and production-ready.
 ---
 
 ## 📂 Project Structure
-<img width="252" height="687" alt="image" src="https://github.com/user-attachments/assets/847b5fb2-d628-4835-9595-b9a92875de5a" />
-
+```bash
+deep_learning_project/
+│── config.py
+│── preprocessing.py
+│── model.py
+│── train.py
+│── evaluate.py
+│── predict.py
+│── live_detection.py
+│── checkpoints/
+│── results/
+│ ├── logs/
+│ ├── plots/
+│ ├── metrics/
+│ ├── predictions/
+│ ├── screenshots/
+│ └── recordings/
+│── fer2013/
+│ ├── fer2013.csv
+│ ├── train/
+│ └── test/
+└── gui/
+├── app.py
+├── pages/
+│ ├── image_prediction.py
+│ ├── webcam_live.py
+│ ├── model_info.py
+│ ├── dataset_page.py
+│ └── evaluation_page.py
+```
 
 
 ---
@@ -54,7 +82,7 @@ If requirements.txt is not available:
 ```bash
 pip install torch torchvision numpy opencv-python pillow matplotlib tqdm tensorboard streamlit
 ```
-
+---
 ## 📊 Dataset Preparation (FER2013)
 
 If the dataset is provided as a CSV file:
