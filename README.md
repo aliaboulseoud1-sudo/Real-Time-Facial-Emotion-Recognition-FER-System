@@ -46,11 +46,26 @@ python -m venv venv
 source venv/bin/activate   # Linux
 venv\Scripts\activate      # Windows
 ```
-## 2️⃣ Install Dependencies
+### 2️⃣ Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 If requirements.txt is not available:
 ```bash
 pip install torch torchvision numpy opencv-python pillow matplotlib tqdm tensorboard streamlit
+```
+
+## 📊 Dataset Preparation (FER2013)
+
+If the dataset is provided as a CSV file:
+```python
+from preprocessing import FERDatasetLoader
+FERDatasetLoader.csv_to_images("fer2013.csv", "fer2013")
+```
+
+This will generate:
+```python
+fer2013/
+├── train/
+└── test/
 ```
