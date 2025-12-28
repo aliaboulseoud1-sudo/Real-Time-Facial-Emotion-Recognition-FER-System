@@ -1,14 +1,14 @@
-# 🧠 Real-Time Facial Emotion Recognition (FER) System
+# Real-Time Facial Emotion Recognition (FER) System
 
 Deep Learning Project using **PyTorch**  
 Transfer Learning (ResNet18 / MobileNetV2) + **Streamlit GUI**
 
-📅 Date: 11/12/2025  
-👥 Team: **THE BRO**
+Date: 11/12/2025  
+Team: **THE BRO**
 
 ---
 
-## 📌 Overview
+## Overview
 This project implements a complete **Real-Time Facial Emotion Recognition (FER)** system trained on the **FER2013** dataset.  
 It provides an end-to-end deep learning pipeline starting from data preprocessing to real-time webcam emotion detection with a modern web-based GUI.
 
@@ -16,7 +16,7 @@ The system is modular, configurable, and production-ready.
 
 ---
 
-## ✨ Key Features
+## Key Features
 - Data preprocessing & augmentation
 - Custom dataset loader
 - Transfer Learning using **ResNet18** and **MobileNetV2**
@@ -31,7 +31,7 @@ The system is modular, configurable, and production-ready.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```bash
 deep_learning_project/
 │── config.py
@@ -66,15 +66,15 @@ deep_learning_project/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### 1️⃣ Create Virtual Environment
+### Create Virtual Environment
 ```bash
 python -m venv venv
 source venv/bin/activate   # Linux
 venv\Scripts\activate      # Windows
 ```
-### 2️⃣ Install Dependencies
+### Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
@@ -83,7 +83,7 @@ If requirements.txt is not available:
 pip install torch torchvision numpy opencv-python pillow matplotlib tqdm tensorboard streamlit
 ```
 ---
-## 📊 Dataset Preparation (FER2013)
+## Dataset Preparation (FER2013)
 
 If the dataset is provided as a CSV file:
 ```python
@@ -98,7 +98,7 @@ fer2013/
 └── test/
 ```
 ---
-## 🧠 Model Architecture
+## Model Architecture
 
 ### Supported Models
 - **ResNet18** (default)
@@ -112,7 +112,7 @@ nn.Sequential(
 )
 ```
 ---
-## 🏋️ Training the Model
+## Training the Model
 
 ```bash
 python train.py
@@ -131,7 +131,7 @@ tensorboard --logdir results/logs
 ```
 ---
 
-## 📈 Evaluation
+## Evaluation
 ```bash
 python evaluate.py
 ```
@@ -144,7 +144,7 @@ Generates:
 
 ---
 
-## 🔍 Prediction
+## Prediction
 ### Single Image
 ```bash
 python predict.py --image path/to/image.png
@@ -156,7 +156,7 @@ Prediction: Happy (94.12%)
 ```
 ---
 
-## 🎥 Real-Time Webcam Detection
+## Real-Time Webcam Detection
 ```bash
 python live_detection.py
 ```
@@ -173,7 +173,7 @@ Features:
 
 ---
 
-## 🖥️ Graphical User Interface (GUI)
+## Graphical User Interface (GUI)
 
 A fully interactive **Streamlit-based web GUI** with modern UI/UX design.
 
@@ -193,7 +193,7 @@ streamlit run app.py
 
 ---
 
-## 🧩 GUI Architecture
+## GUI Architecture
 ```bash
 app.py
 pages/
@@ -208,7 +208,7 @@ assets/
 
 ---
 
-## 🚀 Model Improvements & Enhancements
+## Model Improvements & Enhancements
 ### Baseline Performance
 - FER2013 only: ~65% accuracy (expected for dataset quality)
 
@@ -234,7 +234,7 @@ assets/
 
 ---
 
-## 👥 Team Members & Contributions
+## Team Members & Contributions
 
 ### Hazem Hatem
 - Data preprocessing & augmentation
@@ -262,6 +262,6 @@ assets/
 
 ---
 
-## 📜 License
+## License
 
 This project is developed for **educational and research purposes.**
