@@ -129,3 +129,29 @@ python train.py
 ```bash
 tensorboard --logdir results/logs
 ```
+---
+
+## 📈 Evaluation
+```bash
+python evaluate.py
+```
+
+Generates:
+- Classification Report
+- Confusion Matrix
+- Accuracy & Loss Metrics
+- Saved plots in results/plots/
+
+---
+
+## 🔍 Prediction
+### Single Image
+```bash
+python predict.py --image path/to/image.png
+```
+
+Example Output:
+```markdown
+Prediction: Happy (94.12%)
+```
+---
