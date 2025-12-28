@@ -111,3 +111,21 @@ nn.Sequential(
     nn.Linear(in_features, 7)
 )
 ```
+---
+## 🏋️ Training the Model
+
+```bash
+python train.py
+```
+### Training Features
+- AMP (Mixed Precision)
+- Adam Optimizer
+- ReduceLROnPlateau Scheduler
+- Early Stopping
+- Checkpoint Saving
+- TensorBoard Logging
+- View training logs:
+  
+```bash
+tensorboard --logdir results/logs
+```
