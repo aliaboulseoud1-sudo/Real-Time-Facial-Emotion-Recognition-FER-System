@@ -97,3 +97,17 @@ fer2013/
 ├── train/
 └── test/
 ```
+---
+## 🧠 Model Architecture
+
+### Supported Models
+- **ResNet18** (default)
+- **MobileNetV2**
+
+### Final Classifier
+```python
+nn.Sequential(
+    nn.Dropout(0.6),
+    nn.Linear(in_features, 7)
+)
+```
