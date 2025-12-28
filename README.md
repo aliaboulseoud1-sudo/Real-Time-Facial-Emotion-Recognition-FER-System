@@ -162,9 +162,9 @@ python live_detection.py
 ```
 
 Controls:
-- q → Quit
-- s → Save frame
-- r → Record video
+- **q** → Quit
+- **s** → Save frame
+- **r** → Record video
   
 Features:
 - Real-time emotion detection
@@ -173,6 +173,25 @@ Features:
 
 ---
 
+## 🖥️ Graphical User Interface (GUI)
+
+A fully interactive **Streamlit-based web GUI** with modern UI/UX design.
+
+### GUI Capabilities
+- Upload image & predict emotion
+- Live webcam emotion detection
+- Model inspection
+- Dataset exploration
+- Training & evaluation visualization
+- Dark / Light mode
+- Animated and responsive UI
+
+#### Run GUI
+```bash
+streamlit run app.py
+```
+
+---
 
 
 
