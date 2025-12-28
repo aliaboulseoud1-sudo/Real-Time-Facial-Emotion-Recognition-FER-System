@@ -155,3 +155,25 @@ Example Output:
 Prediction: Happy (94.12%)
 ```
 ---
+
+## 🎥 Real-Time Webcam Detection
+```bash
+python live_detection.py
+```
+
+Controls:
+- q → Quit
+- s → Save frame
+- r → Record video
+  
+Features:
+- Real-time emotion detection
+- FPS display
+- Emotion smoothing
+
+---
+
+
+
+
+
