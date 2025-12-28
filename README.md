@@ -193,6 +193,20 @@ streamlit run app.py
 
 ---
 
+## 🧩 GUI Architecture
+```bash
+app.py
+pages/
+├── image_prediction.py
+├── webcam_live.py
+├── model_info.py
+├── dataset_page.py
+└── evaluation_page.py
+assets/
+└── fer_example.jpg
+```
+
+---
 
 
 
